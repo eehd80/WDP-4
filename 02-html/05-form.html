@@ -8,7 +8,91 @@
 </head>
 <body>
     <h1>html form</h1>
-    
+
+    <form action="" method="get">
+        <fieldset>
+            <legend>회원가입</legend>
+
+            <label for="id">아이디</label>
+            <input type="text" name="id" id="id" placeholder="6자리 이상 특수문자 포함" required>
+            <br>
+
+            <label for="pw">비밀번호</label>
+            <!-- input:password -->
+            <input type="password" name="pw" id="pw" required> <br>
+
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name" value="정미애">
+
+            <hr>
+
+            <strong>성별</strong>
+            <input type="radio" name="sex" id="male">
+            <label for="male">남자</label>
+            <input type="radio" name="sex" id="female">
+            <label for="female">여자</label>
+            <br><br>
+
+            <input type="checkbox" name="service" id="service">
+            <label for="service">이용약관 동의</label>
+
+            <div class="box" 
+            style="border: 1px solid #000; 
+            background-color: #eee; 
+            height: 70px; overflow-y: scroll;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ducimus sint corrupti similique magnam, consequuntur suscipit voluptates quaerat dignissimos? Consequuntur quae tempora dolorem illo aliquid quos alias eum ipsum veritatis?
+            </div>
+
+            <hr>
+
+            <label for="email">이메일</label>
+            <input type="email" name="email" id="email" placeholder="id@gamail.com">
+            <br>
+            <label for="tel">핸드폰 번호</label>
+            <input type="tel" name="tel" id="tel" value="01012345678"  readonly  maxlength="11">
+            <br>
+            <label for="yy">생년월일</label>
+            <input type="text" name="yy" id="yy" size="4" maxlength="4">
+            <select name="mm" id="mm" title="월">
+                <option value="">월</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <input type="text" name="dd" id="dd" title="일" size="4" maxlength="2">
+
+            <hr>
+            <label for="file">첨부파일</label>
+            <input type="file" name="file" id="file" multiple>
+
+            <hr>
+            <!-- 정보를 서버에 전송할 때 버튼 사용 -->
+            <input type="submit" value="회원가입">
+            <input type="button" value="닫기">
+            <button>닫기</button>
+            <input type="reset" value="취소">
+            <!-- 단순이 페이지 전환할 때 사용 -->
+            <a href="#" 
+            style="width: 70px;height: 23px;
+            background-color: #eee; 
+            border: 1px solid #000;
+            display: block;"
+            >회원가입</a>
+
+        </fieldset>
+    </form>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
     
 </body>
 </html>
