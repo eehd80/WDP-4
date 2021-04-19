@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font size : css</title>
+    <style>
+        body {
+            margin: 0; padding: 0;
+            /* 기준 폰트 크기 */
+            font-size: 14px; line-height: 1.5; 
+            color: #000; text-decoration: none;
+            list-style: none; box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>css font size</h1>
+
+    <h2>1. px 단위 (절대값)</h2>
+    <div class="size1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione possimus ut ipsum esse illum, iste officiis voluptatum reiciendis repudiandae laboriosam, rerum vitae. Aliquam, quod a quis natus omnis harum optio.
+    </div>
+
+    <style>
+        .size1 {
+            font-size: 14px; line-height: 1.5;
+        }
+    </style>
+
+    <h2>2. em 단위 (상대값) </h2>
+    <ul>
+        <li>안녕하세요. <b>더조은</b> 입니다.</li>
+        <li><b>더조은</b> 컴퓨터에서 공지합니다.</li>
+        <li><b>웹디자인</b>(퍼블리싱) 오픈합니다.</li>
+        <li><b>웹디자인</b>(퍼블리싱) 오픈합니다.</li>
+    </ul>
+
+    <style>
+        ul li:first-child {font-size: 14px;}
+        ul li:first-child b {font-size: 28px;}
+
+        ul li:nth-child(2) {font-size: 0.875em;}
+        ul li:nth-child(2) b {font-size: 1.75em;}
+        
+        ul li:nth-child(3) {font-size: 2em;} /* 28px */
+        ul li:nth-child(3) b {font-size: 1em;} /* 28px */
+       
+        ul li:nth-child(4) {font-size: 2em;} /* 28px */
+        ul li:nth-child(4) b {font-size: 2rem;} /* 28px */
+        /* rem 단위는 html, body 폰트 사이트 기준 */
+    </style>
+
+    <h2>3. vw 단위 (상대값)</h2>
+
+    <p>가나다라마바사</p>
+    <style>
+        p {
+            font-size: 10vw;
+            background: tomato;
+            height: 100vh;
+        }
+    </style>
+
+
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+</body>
+</html>
