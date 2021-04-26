@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition : css</title>
+</head>
+<body>
+    <h1>css transiton</h1>
+
+    <div class="wrap">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+
+    <style>
+        .wrap {
+            display: flex; justify-content: space-between;
+            overflow: hidden;
+            width: 400px; padding: 30px;
+            background: #eee;
+        }
+        .wrap div {
+            width: 100px; height: 100px;
+            background-color: tomato;
+            color: #fff; font-size: 3em;
+            text-align: center; line-height: 100px;
+        }
+        .wrap .box1 {
+            transform : translateY(140px);
+            opacity : .1;
+            transition: all 1s ease-in;
+        }
+        .wrap:hover .box1 {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .wrap .box2 {
+             transform: translateY(-120px) rotate(90deg);
+            transition: all 1s ease-out .5s;
+        }
+        .wrap:hover .box2 {
+             transform: translateY(0) rotate(0deg);
+        }
+        .wrap .box3 {
+             transform: translateX(120px);
+             background-color: rgba(255, 99, 71, 0.5);
+             transition : all 1s  ease-in-out 1s;
+        }
+        .wrap:hover .box3 {
+            transform: translateX(0);
+             background-color: rgb(255, 99, 71);
+        }
+       
+       
+    </style>
+
+
+
+    
+</body>
+</html>

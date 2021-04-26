@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+    margin: 0; padding: 0;
+    font-size: 14px; 
+    color: #222328;
+    line-height: 1.5;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;    
+}
+/* 3. float 해제 : clearfix */
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+
+.wrap {
+    width: 500px;
+    margin: 0 auto;
+    background: #eee;
+}
+header {
+    /* 1. float 해제 : 높이값을 넣는다 */
+    height: 50px;
+    background-color:yellow;
+}
+header h1 {
+    float: left;
+}
+header nav {
+    float: right;
+}
+header nav ul {
+    overflow: auto;
+}
+header nav li {
+    float: left;
+}
+
+.slide {
+    overflow: hidden;
+    position: relative;
+    height: 150px;
+    /* overflow: hidden; */
+    background-color: #eee;
+}
+.slide ul {
+    position: absolute;top: 0;left: 0;
+    /* 2. float 해제 : overflow : auto */
+    overflow: auto;
+    width: 300%;
+    animation: slide-ani 10s infinite alternate;
+}
+@keyframes slide-ani {
+    0% {left: 0;} /* 1번째 슬라이드 */
+    30% {left: 0;} /* 1번째 슬라이드 */
+    35% {left: -100%;} /* 2번째 슬라이드 */
+    65% {left: -100%;} /* 2번째 슬라이드 */
+    70% {left: -200%;} /* 3번째 슬라이드 */
+    100% {left: -200%;} /* 3번째 슬라이드 */
+}
+.slide li {
+    float: left;
+    height: 150px; width: 33.333%;
+}
+.slide li:first-child {background: rgba(255, 0, 200, 0.7);}
+.slide li:nth-child(2) {background: rgba(255, 0, 200,.5);}
+.slide li:last-child {background: rgba(255, 0, 200,.3);}
+
+.container {
+
+    background-color: tomato;
+}
+.container section {
+    float: left;
+    height: 100px; width: 30%;
+    margin-right: 5%; margin-bottom: 10px;
+    border: 1px solid #000;
+    background: rgba(255,255,255,.5);
+}
+/* .container section:last-child {
+    margin-right: 0;
+} */
+/* 3의 배수만 선택 */
+.container section:nth-child(3n) {
+    margin-right: 0;
+}
+/* 7번째 이후 모두 요소 */
+.container section:nth-child(n+7) {
+    margin-bottom: 0;
+}
+
+
+footer {
+    overflow: auto;
+    padding: 10px 0;
+    background-color:blue;    
+    text-align: center;
+}
+footer * {color: #fff;}
+footer h1 {float: left;}
+footer .sns {float: right;}
+footer .copyright {display: inline-block;}
+
+#modal {
+    display: none;
+    position: fixed;top: 0;left: 0;right: 0;bottom: 0;
+    background: rgba(0,0,0,.7);
+}
+#modal .box {
+    position: absolute;top: 50%;left: 50%;
+    width: 300px; height: 300px;
+    margin: -150px 0 0 -150px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: #fff;
+}
+#modal .btn-close {
+    position: absolute;top: -20px;right: -20px;
+    width: 50px; height: 50px;
+    border-radius: 50%; border: none;
+    background: tomato;
+    text-align: center; line-height: 30px;
+    cursor: pointer;
+}
