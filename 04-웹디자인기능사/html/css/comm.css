@@ -8,18 +8,34 @@
 }
 .wrap {
     width: 1200px; margin: 0 auto;
-    background: #eee;
+    /* background: #eee; */
 }
 header {
     display: flex; justify-content: space-between;
     height: 100px;
-    border-bottom: 1px solid #000;
+    /* border-bottom: 1px solid #002866; */
 }
 header h1 a {
     display: block;
     width: 151px; height: 100%;
     background: url(../images/logo.png) no-repeat 0 50%;
     text-indent: -9999px;
+}
+.nav-depth1 {
+    display: flex;
+}
+.nav-depth1 > li > a {
+    display: block;
+    height: 100px; padding: 0 40px;
+    line-height: 100px;
+}
+.nav-depth1 > li > a:hover {
+    font-weight: bold;
+    color: red;
+    border-bottom: 3px solid red;
+}
+.nav-depth2 {
+    display: none;
 }
 .slide {
     height: 300px;
