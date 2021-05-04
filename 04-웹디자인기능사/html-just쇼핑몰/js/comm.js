@@ -29,9 +29,16 @@ $(function(){
     // slide
     // 변수
     // 슬라이드의 몇 번째
-    let now = 1;
+    let now = 1,
+        $송일국 = $('.slide > ul'),
+        width = 100
     // 3초 마다 실행
     setInterval(function(){
+        slide()
+    }, 3000)
+
+
+    function slide(){
         // 조건문
         // 만약 1,2번째 슬라이드라면 
         // 다음 슬라이드로 이동
@@ -40,20 +47,18 @@ $(function(){
         // if(조건문){참일 경우 실행문}else{거짓일 경우 실행문}
         if(now < 3){
             // .slide ul이 애니메이션 되라~ 'left:-1200px'
-            $('.slide > ul').animate({
-                left : (100 * now * (-1)) + '%'
+            $송일국.animate({
+                left : (width * now * (-1)) + '%'
             })
-            now = now + 1
+            // now = now + 1
+            now++
         }else{
-            $('.slide > ul').animate({
+            $송일국.animate({
                 left : 0
             })
             now = 1
         }
-    }, 3000)
-
-
-
+    }
     
 
 
