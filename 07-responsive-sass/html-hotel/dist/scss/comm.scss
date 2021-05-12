@@ -1,8 +1,6 @@
 @charset "UTF-8";
 @import url(./reset.css);
 
-// body {background: url(../../pc.png) 0 100% no-repeat;}.wrap {opacity: .5;}
-
 $b : #000;
 $w : #fff;
 $tomato : tomato;
@@ -15,7 +13,7 @@ $lightpink: lightpink;
 }
 #header {
     position: fixed;top: 0;left: 0;bottom: 0;
-    width: 192px;
+    width: 192px; 
     padding: 40px 0 30px;
     background: $w;
     .logo {
@@ -28,7 +26,7 @@ $lightpink: lightpink;
         }
     }
     .nav-goto {
-        position: absolute;bottom: 0;left: 0; right: 0;
+        position: absolute;bottom: 10px;left: 0; right: 0;
         text-align: center;
         .lst-goto {
             li {
@@ -53,14 +51,30 @@ $lightpink: lightpink;
         .lst-sns {
             li {
                 display: inline-block;
-                &:first-child a {
-                    background-image: url(../../images/sns-facebook.svg);
+                &:first-child {
+                    a {
+                        background-image: url(../../images/sns-facebook.svg);
+                        &:hover {
+                            background-image: url(../../images/sns-facebook-on.svg);
+                        }
+                    }
                 }
-                &:nth-child(2) a {
-                    background-image: url(../../images/sns-instagram.svg);
+                &:nth-child(2) {
+                    a {
+                        margin: 0 3px;
+                        background-image: url(../../images/sns-instagram.svg);
+                        &:hover {
+                            background-image: url(../../images/sns-instagram-on.svg);
+                        }
+                    }
                 }
-                &:nth-child(3) a {
-                    background-image: url(../../images/sns-youtube.svg);
+                &:nth-child(3) {
+                    a {
+                        background-image: url(../../images/sns-youtube.svg);
+                        &:hover {
+                            background-image: url(../../images/sns-youtube-on.svg);
+                        }
+                    }
                 }
             }
             a {
@@ -90,6 +104,24 @@ $lightpink: lightpink;
 .util {
     height: 40px;
     background: $b; color: $w;
+    .col-left {
+        float: left;
+        li {
+            float: left;
+        }
+    }
+    .col-right {
+        float: right;
+        li {
+            float: left;
+        }
+    }    
+    a {
+        display: block;
+        height: 40px; padding: 0 10px;
+        line-height: 3.114em;
+        color: $w; font-size: 0.857em; /* 12px (14px 기준) */
+    }
 }
 
 $width : 20%;
@@ -98,49 +130,68 @@ $height : 25%;
     height: calc(100vh - 40px);
     // background: $lightblue;
     article {
+        position: relative;
         float: left;
-        width: $width; height: $height;
-        // border: 1px solid $tomato;
+        width: $width; height: $height; 
+        padding: 30px;
+        h2 {
+            margin-bottom: 5px;
+            font-size: 1.375em;
+        }
+        p {
+            opacity: .7;
+        }
         &:first-child {
             width: $width * 3; height: $height * 2;
-            background: rgba($b, 0.1);
+            background: url(../../images/pic1.jpg) 0 100% no-repeat;
+            background-size: cover;
+            strong {
+                position: absolute;bottom: 2px;right: 0;
+                color: $w; font-size: 10vw;line-height: 0.7;
+            }
         }
-        &:nth-child(2) {
+        &:nth-child(2){
             width: $width * 2;
-            background: rgba($b, 0.15);
-        }
-        &:nth-child(3) {
-            background: rgba($b, 0.2);
-        }
-        &:nth-child(4) {
-            background: rgba($b, 0.25);
-        }
-        &:nth-child(5) {
-            background: rgba($b, 0.3);
-        }
-        &:nth-child(6) {
+            background: $w;
+          }
+          &:nth-child(3){
+            background: #c6f6fa;
+          }
+          &:nth-child(4){
+            background: url(../../images/pic2.jpg) 50% 50% no-repeat;
+            background-size: cover;
+          }
+          &:nth-child(5){
+            background: url(../../images/pic3.jpg) 50% 50% no-repeat;
+            background-size: cover;
+          }
+          &:nth-child(6){
             width: $width * 2;
-            background: rgba($b, 0.35);
-        }
-        &:nth-child(7) {
-            background: rgba($b, 0.4);
-        }
-        &:nth-child(8) {
-            background: rgba($b, 0.45);
-        }
-        &:nth-child(9) {
+            background: $w;
+          }
+          &:nth-child(7){
+            background: url(../../images/pic4.jpg) 50% 50% no-repeat;
+            background-size: cover;
+          }
+          &:nth-child(8){
+            background: $w;
+          }
+          &:nth-child(9){
             width: $width * 2;
-            background: rgba($b, 0.5);
-        }
-        &:nth-child(10) {
-            background: rgba($b, 0.55);
-        }
-        &:nth-child(11) {
-            background: rgba($b, 0.6);
-        }
-        &:last-child {
-            background: rgba($b, 0.65);
-        }
+            background: url(../../images/pic5.jpg) 50% 50% no-repeat;
+            background-size: cover;
+          }
+          &:nth-child(10){
+            background: url(../../images/pic6.jpg) 50% 50% no-repeat;
+            background-size: cover;
+          }
+          &:nth-child(11){
+            background: #e6f5fc;
+          }
+          &:last-child {
+            background: url(../../images/pic7.jpg) 50% 50% no-repeat;
+            background-size: cover;
+          }
     }
 }
 
@@ -149,7 +200,7 @@ $height : 25%;
     .wrap {
         padding-left: 0;
     }
-    header {
+    #header {
         position: static;
         width: 100%; height: 83px;
     }
@@ -245,7 +296,7 @@ $height : 25%;
 // width 639px 이하일 경우 적용
 @media screen and (max-width: 639px) {
 
-    header {
+    #header {
         height: 120px;
     }
     .util {
@@ -269,7 +320,7 @@ $height : 25%;
 // width 479px 이하일 경우 적용
 @media screen and (max-width: 479px) {
     
-    header {
+    #header {
         position: fixed; top: 50%; left: 50%;
         width: 80%; height: 80vh;
          transform: translate(-50%, -50%);
