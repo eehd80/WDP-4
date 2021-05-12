@@ -60,6 +60,29 @@
   display: inline-block;
 }
 
+#header .nav-goto .lst-sns li:first-child a {
+  background-image: url(../../images/sns-facebook.svg);
+}
+
+#header .nav-goto .lst-sns li:nth-child(2) a {
+  background-image: url(../../images/sns-instagram.svg);
+}
+
+#header .nav-goto .lst-sns li:nth-child(3) a {
+  background-image: url(../../images/sns-youtube.svg);
+}
+
+#header .nav-goto .lst-sns a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: tomato;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 90% auto;
+}
+
 #gnb {
   margin: 75px auto 0;
 }
