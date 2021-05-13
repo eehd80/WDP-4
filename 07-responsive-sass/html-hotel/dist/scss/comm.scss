@@ -134,6 +134,10 @@ $height : 25%;
         float: left;
         width: $width; height: $height; 
         padding: 30px;
+        background-size: cover;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        transition: all .5s;
         h2 {
             margin-bottom: 5px;
             font-size: 1.375em;
@@ -143,7 +147,7 @@ $height : 25%;
         }
         &:first-child {
             width: $width * 3; height: $height * 2;
-            background: url(../../images/pic1.jpg) 0 100% no-repeat;
+            background-image: url(../../images/pic1.jpg);
             background-size: cover;
             strong {
                 position: absolute;bottom: 2px;right: 0;
@@ -152,45 +156,48 @@ $height : 25%;
         }
         &:nth-child(2){
             width: $width * 2;
-            background: $w;
+            background-color: $w;
           }
           &:nth-child(3){
-            background: #c6f6fa;
+            background-color: #c6f6fa;
           }
           &:nth-child(4){
-            background: url(../../images/pic2.jpg) 50% 50% no-repeat;
-            background-size: cover;
+            background-image: url(../../images/pic2.jpg);
           }
           &:nth-child(5){
-            background: url(../../images/pic3.jpg) 50% 50% no-repeat;
-            background-size: cover;
+            background-image: url(../../images/pic3.jpg);
           }
           &:nth-child(6){
             width: $width * 2;
-            background: $w;
+            background-color: $w;
           }
           &:nth-child(7){
-            background: url(../../images/pic4.jpg) 50% 50% no-repeat;
-            background-size: cover;
+            background-image: url(../../images/pic4.jpg);
           }
           &:nth-child(8){
-            background: $w;
+            background-color: $w;
           }
           &:nth-child(9){
             width: $width * 2;
-            background: url(../../images/pic5.jpg) 50% 50% no-repeat;
-            background-size: cover;
+            background-image: url(../../images/pic5.jpg);
           }
           &:nth-child(10){
-            background: url(../../images/pic6.jpg) 50% 50% no-repeat;
-            background-size: cover;
+            background-image: url(../../images/pic6.jpg);
           }
           &:nth-child(11){
-            background: #e6f5fc;
+            background-color: #e6f5fc;
           }
           &:last-child {
-            background: url(../../images/pic7.jpg) 50% 50% no-repeat;
-            background-size: cover;
+            background-image: url(../../images/pic7.jpg);
+          }
+          .la-sync {
+              position: absolute;bottom: -50px;right: -50px;
+              color: $w; font-size: 17em;
+              animation: ani-sync 10s infinite both;
+          }
+          @keyframes ani-sync {
+              0% {transform: rotate(0deg);}
+              100% {transform: rotate(360deg);}
           }
     }
 }
@@ -201,8 +208,19 @@ $height : 25%;
         padding-left: 0;
     }
     #header {
+        display: flex;
         position: static;
         width: 100%; height: 83px;
+        .logo {
+            float: left;
+        }
+        .nav-goto {
+            display: none;
+        }
+    }    
+    #gnb {
+        float: right;
+        margin-top: 0;
     }
     
     $height : 250px;
