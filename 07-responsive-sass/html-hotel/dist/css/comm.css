@@ -1,5 +1,218 @@
 @charset "UTF-8";
-@import url(./reset.css);
+/* reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button, section, article, header, main, footer, nav, aside, details {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+fieldset, img {
+  border: 0 none;
+}
+
+dl, ul, ol, menu, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+input, select, textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-size: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type='text'], input[type='password'], input[type='submit'], input[type='search'] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+input:checked[type='checkbox'] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+
+button {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type='button'], input[type='submit'], input[type='reset'], input[type='file'] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+body {
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: 'Poppins', 'Malgun Gothic', '맑은 고딕', sans-serif;
+  color: #333;
+}
+
+/* 기본 폰트 설정 */
+th, td, input, select, textarea, button {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  font-family: 'Poppins', 'Malgun Gothic', '맑은 고딕', sans-serif;
+  color: #333;
+}
+
+/* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  text-decoration: none;
+}
+
+address, caption, cite, code, dfn, em, var, address, caption, cite, code, dfn, em, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+hr {
+  display: none;
+}
+
+input[type=password] {
+  font-family: 'Malgun Gothic';
+}
+
+/* skipnavigation */
+#u_skip a {
+  position: absolute;
+  left: -3000%;
+}
+
+#u_skip a:focus {
+  display: block;
+  left: 0;
+  top: 0;
+  z-index: 10000000000;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background: #0072bc;
+  color: #fff;
+  text-align: center;
+}
+
+/* 이미지 스프라이트 */
+.img_g {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../../images/comm/img-comm.png) no-repeat;
+  vertical-align: top;
+}
+
+/* 이미지 */
+/* global */
+.ir_pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir_wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind, caption, legend {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 테이블 초기화 */
+.clear_g {
+  display: block;
+  overflow: visible;
+  width: auto;
+  clear: both;
+  *zoom: 1;
+}
+
+.clear_g:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  content: '';
+}
+
 .wrap {
   padding-left: 192px;
 }
@@ -19,7 +232,7 @@
   width: 137px;
   height: 109px;
   margin: 0 auto;
-  background: url(../../images/logo.gif) 0 0 no-repeat;
+  background: url(../../images/logo.gif) 0 50% no-repeat;
   text-indent: -9999px;
 }
 
@@ -103,6 +316,7 @@
 #gnb a {
   display: block;
   padding: 8px 0 8px 64px;
+  font-size: 1.2em;
 }
 
 #gnb a:hover {
@@ -111,7 +325,7 @@
 }
 
 .util {
-  height: 40px;
+  height: 50px;
   background: #000;
   color: #fff;
 }
@@ -134,24 +348,25 @@
 
 .util a {
   display: block;
-  height: 40px;
+  height: 50px;
   padding: 0 10px;
-  line-height: 3.114em;
+  line-height: 4.5em;
   color: #fff;
   font-size: 0.857em;
   /* 12px (14px 기준) */
 }
 
 .container {
-  height: calc(100vh - 40px);
+  height: calc(100vh - 50px);
 }
 
 .container article {
   position: relative;
   float: left;
+  overflow: hidden;
   width: 20%;
   height: 25%;
-  padding: 30px;
+  padding: 36px 20px;
   background-size: cover;
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -161,7 +376,9 @@
 
 .container article h2 {
   margin-bottom: 5px;
-  font-size: 1.375em;
+  font-size: 1.875em;
+  letter-spacing: -.5px;
+  font-weight: 300;
 }
 
 .container article p {
@@ -178,9 +395,9 @@
 .container article:first-child strong {
   position: absolute;
   bottom: 2px;
-  right: 0;
+  right: -10px;
   color: #fff;
-  font-size: 10vw;
+  font-size: 11em;
   line-height: 0.7;
 }
 
@@ -231,14 +448,25 @@
   background-image: url(../../images/pic7.jpg);
 }
 
+.container article:nth-child(5)::after, .container article:nth-child(9)::after, .container article:nth-child(10)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
 .container article .la-sync {
   position: absolute;
   bottom: -50px;
   right: -50px;
   color: #fff;
   font-size: 17em;
-  -webkit-animation: ani-sync 10s infinite both;
-          animation: ani-sync 10s infinite both;
+  -webkit-animation: ani-sync 10s linear infinite both;
+          animation: ani-sync 10s linear infinite both;
 }
 
 @-webkit-keyframes ani-sync {
@@ -268,22 +496,35 @@
     padding-left: 0;
   }
   #header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     position: static;
     width: 100%;
-    height: 83px;
+    height: 103px;
+    padding: 0;
   }
   #header .logo {
     float: left;
+  }
+  #header .logo a {
+    width: 250px;
+    height: 103px;
+    background-image: url(../../images/logo2.png);
   }
   #header .nav-goto {
     display: none;
   }
   #gnb {
     float: right;
-    margin-top: 0;
+    overflow: auto;
+    margin: 0;
+  }
+  #gnb li {
+    float: left;
+  }
+  #gnb a {
+    height: 103px;
+    padding: 0 34px;
+    text-align: center;
+    line-height: 103px;
   }
   .container {
     overflow: auto;
@@ -352,30 +593,45 @@
 }
 
 @media screen and (max-width: 779px) {
-  .container article {
-    width: 50%;
-  }
-  .container article:first-child, .container article:nth-child(2) {
-    width: 100%;
-  }
-  .container article:nth-child(n+3) {
-    /* 3번째 이후 모든 요소 */
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 639px) {
   #header {
-    height: 120px;
+    height: auto;
+    padding-top: 14px;
+  }
+  #header .logo {
+    float: none;
+    margin: 0 auto;
+  }
+  #header .logo a {
+    width: 200px;
+    height: 53px;
+    background-size: contain;
+  }
+  #gnb {
+    float: none;
+  }
+  #gnb a {
+    height: 63px;
+    line-height: 63px;
   }
   .util {
     display: none;
   }
   .container {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 130px);
   }
-  .container article:first-child {
+  .container article {
+    width: 50%;
+  }
+  .container article:first-child, .container article:nth-child(2) {
+    width: 100%;
     height: 28%;
+  }
+  .container article:first-child strong, .container article:nth-child(2) strong {
+    font-size: 20vw;
+  }
+  .container article:nth-child(n+3) {
+    /* 3번째 이후 모든 요소 */
+    width: 50%;
   }
   .container article:nth-child(n+2) {
     height: 18%;
@@ -387,16 +643,44 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 80%;
+    z-index: 1000;
+    width: 70%;
     height: 80vh;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+    background-color: transparent;
+  }
+  #header .logo {
+    margin-bottom: 23px;
+  }
+  #header .logo a {
+    width: 250px;
+    height: 105px;
+    background-image: url(../../images/logo.gif);
+    background-position: 50% 50%;
+  }
+  #gnb li {
+    float: none;
+    margin-bottom: 7px;
+  }
+  #gnb a {
+    padding: 0;
+    height: 47px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-weight: 300;
+    line-height: 47px;
   }
   .container {
     height: auto;
   }
   .container article:first-child {
     height: 100vh;
+    background-position: 60% 50%;
+  }
+  .container article:first-child strong {
+    display: none;
   }
   .container article:nth-child(n+2) {
     display: none;
