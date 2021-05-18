@@ -116,27 +116,41 @@
                     <!-- w고정가운데정렬 -->
                     <h2 class="sec-tit">Contacts</h2>
                     <div class="sec-cont">
-                        <form action="" method="post">
+                        <form class="gform" action="https://script.google.com/macros/s/AKfycbygYzMOcB5_VRvSsBSR8qYvaGp29tcZoOM-bBFJqoRwcn9byEWWA_dg8ik5FCSYID6Y/exec" method="post">
                             <div class="row">
-                                <div class="col-lg-3">
+                                <div class="col-lg-1">
                                     <label for="usr">이름</label>
                                 </div>
-                                <div class="col-lg-3">                                    
-                                    <input type="text" class="form-control" id="usr">
+                                <div class="col-lg-5">                                    
+                                    <input type="text" class="form-control" id="usr" name="usr" value="홍길동">
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-1">
                                     <label for="email">이메일</label>
                                 </div>
-                                <div class="col-lg-3">
-                                    <input type="email" class="form-control" id="email">
+                                <div class="col-lg-5">
+                                    <input type="email" class="form-control" id="email" name="email" value="id@mail.com">
+                                </div>
+                                <div class="col-lg-1">
+                                    <label for="comment">문의내용</label>
+                                </div>
+                                <div class="col-lg-11">
+                                    <textarea class="form-control" rows="5" id="comment" name="comment" placeholder="문의주시면 답변 드리겠습니다.">문의주시면 답변 드리겠습니다.</textarea>
                                 </div>
                             </div>
+                            <button type="submit" class="btn btn-primary">메일 전송</button>
+
+                            <div class="thankyou_message alert alert-success  alert-dismissible mt-3">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Success!</strong> Indicates a successful or positive action.
+                              </div>
                         </form>
                     </div>
                 </div>
             </section>
         </div>
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <div class="container">풋터</div>            
+        </footer>
     </div>
 
 
@@ -145,7 +159,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-
+    <script src="./dist/js/form-submission-handler.js"></script>
     <script src="./dist/js/comm.js"></script>
 </body>
 

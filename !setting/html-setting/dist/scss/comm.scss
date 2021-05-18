@@ -40,3 +40,26 @@
 .sec-banner {
     background: $gray-e;
 }
+
+.sec-contacts {
+    .row {
+        margin-bottom: 30px;
+        > div {
+            text-align: left;
+        }
+        label {
+            padding-top: 8px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    }
+    .alert {
+        display: none;
+    }
+}
+
+#footer {
+    padding: 80px 0;
+    background: #555;  color: $w;
+} 
