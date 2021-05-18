@@ -2,3 +2,41 @@
 @import 'reset', 'main', 'contents', 'variables', 'mixins';
 
 // 공통 레이아웃, 공통 디자인
+#header {
+    justify-content: space-between;
+}
+.navbar-brand {
+    display: block;
+}
+.nav-util {
+    display: none;
+    color: $w;
+}
+// 가로사이즈 768px 이상일 경우
+@media screen and (min-width: 768px) {
+    .nav-util {
+      display: block;
+    }
+  }
+
+.sec-g {
+    .container {
+        padding: 100px 0;
+        text-align: center;
+    }
+    .sec-tit {
+        display: inline-block;
+        margin-bottom: 70px;
+        text-align: center;
+        &::after {
+            content: '';
+            display: block;
+            height: 2px; margin-top: 10px;
+            background: $primary;
+
+        }
+    }
+}
+.sec-banner {
+    background: $gray-e;
+}

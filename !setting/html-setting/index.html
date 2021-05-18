@@ -18,20 +18,119 @@
     <meta name="twitter:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
     <meta name="twitter:description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./dist/fonts/fonts.css"> <!-- webfonts 설정 -->
     <link rel="stylesheet" href="./dist/css/comm.css">
 
 </head>
 
 <body>
-    <div id="u_skip"> 
-        <a href="#gnb"><span>주메뉴 바로가기</span></a> 
+    <div id="u_skip">
+        <a href="#gnb"><span>주메뉴 바로가기</span></a>
         <a href="#main"><span>컨텐츠 바로가기</span></a>
-        <a href="#account"><span>로그인 바로가기</span></a> 
+        <a href="#account"><span>로그인 바로가기</span></a>
+    </div>
+
+    <div class="wrap">
+        <header id="header" class="navbar navbar-expand-md bg-dark navbar-dark">
+            <h1>
+                <a class="navbar-brand" href="#">Navbar</a>
+            </h1>
+            <nav>
+
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <nav class="nav-util">
+                유틸메뉴
+            </nav>
+
+        </header>
+        <div class="slide">
+            슬라이드
+        </div>
+        <div id="main">
+            <section class="sec-g sec-bbs">
+                <!-- w100% -->
+                <div class="container">
+                    <!-- w고정가운데정렬 -->
+                    <h2 class="sec-tit">공지사항</h2>
+                    <div class="sec-cont">
+                        <!-- tab -->
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane container active" id="home">Home</div>
+                            <div class="tab-pane container fade" id="menu1">Menu 1</div>
+                            <div class="tab-pane container fade" id="menu2">Menu 2</div>
+                        </div>
+                        <!-- //tab -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec-g sec-banner">
+                <!-- w100% -->
+                <div class="container">
+                    <!-- w고정가운데정렬 -->
+                    <h2 class="sec-tit">배너</h2>
+                    <div class="sec-cont">
+                        컨텐츠
+                    </div>
+                </div>
+            </section>
+
+            <section class="sec-g sec-contacts">
+                <!-- w100% -->
+                <div class="container">
+                    <!-- w고정가운데정렬 -->
+                    <h2 class="sec-tit">Contacts</h2>
+                    <div class="sec-cont">
+                        컨텐츠
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer id="footer"></footer>
     </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> <!-- Popper JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
     <script src="./dist/js/comm.js"></script>
 </body>
 
