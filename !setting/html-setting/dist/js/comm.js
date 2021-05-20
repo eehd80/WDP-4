@@ -1,15 +1,15 @@
 $(document).ready(function(){
 
-  // swiper
+  // swiper-intro
   var swiper = new Swiper(".slide-intro", {
     // spaceBetween: 30,
     effect: "fade",
     centeredSlides: true,
     loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -17,6 +17,31 @@ $(document).ready(function(){
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // slide-banner1
+  var swiper = new Swiper(".slide-bnr1", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 20,
+      },
     },
   });
 
@@ -28,46 +53,6 @@ $(document).ready(function(){
 
 
 
-
-    $('.slide-intro').slick({
-        dots: true,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-          ]
-    });
-
-    $('.slide-banner').slick({
-        
-    });
+    
 
 });

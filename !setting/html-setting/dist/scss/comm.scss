@@ -95,7 +95,74 @@
 
   .slide-intro {
       height: 100vh;
+      .swiper-slide {
+          position: relative;
+        
+          &.swiper-slide-active {
+              strong, p, .link-more {
+                   transform: translateY(0); opacity: 1;
+              }
+          }
+
+          &::after {
+              content: '';
+              position: absolute;top: 0; left: 0; right: 0; bottom: 0;
+              background-color: rgba($b, .4);
+          }
+      }
+      .swiper-txt {
+          position: absolute;top: 50%; left: 50%; z-index: 100;
+          transform: translate(-555px, -50%) scale(.8);
+          transform-origin: 0 50%;
+          width: 600px;
+          text-align: left;
+          strong {
+              display: block;
+              margin-bottom: 20px;
+              color: $w; font-size: 2em; 
+              letter-spacing: -1px; line-height: 1.2;
+              text-shadow: 0 0 3px rgba($b, .8);
+               transform: translateY(60px); opacity: 0;
+               transition: all .5s;
+          }
+          p {
+              color: rgba($w, .8); font-size: .8em;
+              text-shadow: 0 0 3px rgba($b, .8);
+              transform: translateY(60px);opacity: 0;
+              transition: all .5s .5s;
+          }
+          .link-more {
+              display: inline-block;
+              padding: 7px 10px 5px; margin-top: 30px;
+              background-color: $b; color: $w;
+              font-size: .6em;
+              opacity: .6;
+              transform: translateY(60px);opacity: 0;
+              transition: all .5s 1s;
+          }
+      }
   }
+
+// slide-bnr1
+.sec-banner {
+    overflow: hidden;
+}
+.slide-bnr1 {
+    overflow: visible;
+    .swiper-button-next {right: -70px;}
+    .swiper-button-prev {left: -70px;}
+    .swiper-slide {
+        position: relative;
+        display: flex; justify-content: center; align-items: center;
+        height: 200px;
+        background: $w; 
+        &::after {
+            content: '';
+            position: absolute;top: 0;left: 0;right: 0;bottom: 0;
+            border: 1px solid rgba($b, .03);
+        }
+    }
+}
 
 
 #footer {

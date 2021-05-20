@@ -307,6 +307,121 @@ input[type=password] {
   height: 100vh;
 }
 
+.slide-intro .swiper-slide {
+  position: relative;
+}
+
+.slide-intro .swiper-slide.swiper-slide-active strong, .slide-intro .swiper-slide.swiper-slide-active p, .slide-intro .swiper-slide.swiper-slide-active .link-more {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.slide-intro .swiper-slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slide-intro .swiper-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  -webkit-transform: translate(-555px, -50%) scale(0.8);
+          transform: translate(-555px, -50%) scale(0.8);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  width: 600px;
+  text-align: left;
+}
+
+.slide-intro .swiper-txt strong {
+  display: block;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 2em;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.slide-intro .swiper-txt p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: .8em;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  opacity: 0;
+  -webkit-transition: all .5s .5s;
+  transition: all .5s .5s;
+}
+
+.slide-intro .swiper-txt .link-more {
+  display: inline-block;
+  padding: 7px 10px 5px;
+  margin-top: 30px;
+  background-color: #000;
+  color: #fff;
+  font-size: .6em;
+  opacity: .6;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  opacity: 0;
+  -webkit-transition: all .5s 1s;
+  transition: all .5s 1s;
+}
+
+.sec-banner {
+  overflow: hidden;
+}
+
+.slide-bnr1 {
+  overflow: visible;
+}
+
+.slide-bnr1 .swiper-button-next {
+  right: -70px;
+}
+
+.slide-bnr1 .swiper-button-prev {
+  left: -70px;
+}
+
+.slide-bnr1 .swiper-slide {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  background: #fff;
+}
+
+.slide-bnr1 .swiper-slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
 #footer {
   padding: 80px 0;
   background: #555;
