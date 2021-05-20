@@ -7,18 +7,70 @@
     <title>slide slick</title>
     <link rel="stylesheet" href="./dist/vender/slick/slick.css">
     <link rel="stylesheet" href="./dist/vender/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <style>
+        *{
+            margin: 0; padding: 0;
+        }
         .slide-intro {
-            width: 50%; margin: 0 auto;
+            width: 70%; margin: 0 auto;
+            background: red;
+        }
+        .slide-intro .slick-arrow {
+            width: 100px; height: 100px;
+            background: rgba(0,0,0, .7);
+        }
+        .slide-intro .slick-next {
+            right: -65px;
+        }
+        .slide-intro .slick-next:before {
+            font-family: 'Line Awesome Free';
+            font-weight: 900; font-size: 50px;
+            content: "\f105";
+        }
+        .slide-intro .slick-prev {
+            left: -65px; z-index: 100;
+        }
+        .slide-intro .slick-prev:before {
+            font-family: 'Line Awesome Free';
+            font-weight: 900; font-size: 50px;
+            content: "\f104";
+        }
+
+        .slide-intro .slick-list {
+            margin: 0 -20px;
+        }
+        .slide-intro .slick-slide {
+            padding: 0 20px;
         }
         img {
-            width: 100%;
+            width: 100%; height: 500px;
+            object-fit: cover; object-position: 50% 50%;
+        }
+        .slide-intro .slick-dots li button {
+            background: #000; border-radius: 50%;
+            opacity: 0.5;
+        }
+        .slide-intro .slick-dots li.slick-active button {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
 
     <div class="slide-intro">
+        <a href="#"><img src="./images/mainslide-1.jpg" alt=""></a>
+        <a href="#"><img src="./images/mainslide-2.jpg" alt=""></a>
+        <a href="#"><img src="./images/mainslide-3.jpg" alt=""></a>
+        <a href="#"><img src="./images/mainslide-4.jpg" alt=""></a>
+        <a href="#"><img src="./images/mainslide-1.jpg" alt=""></a>
+        <a href="#"><img src="./images/mainslide-2.jpg" alt=""></a>
+        <a href="#"><img src="./images/mainslide-3.jpg" alt=""></a>
+        <a href="#"><img src="./images/mainslide-4.jpg" alt=""></a>
+      </div>
+
+
+      <div class="slide-banner">
         <a href="#"><img src="./images/mainslide-1.jpg" alt=""></a>
         <a href="#"><img src="./images/mainslide-2.jpg" alt=""></a>
         <a href="#"><img src="./images/mainslide-3.jpg" alt=""></a>

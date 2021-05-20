@@ -19,6 +19,7 @@
     <meta name="twitter:description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./dist/fonts/fonts.css"> <!-- webfonts 설정 -->
     <link rel="stylesheet" href="./dist/css/comm.css">
 
@@ -32,7 +33,7 @@
     </div>
 
     <div class="wrap">
-        <header id="header" class="navbar navbar-expand-md bg-dark navbar-dark">
+        <header id="header" class="navbar navbar-expand-md navbar-dark">
             <h1>
                 <a class="navbar-brand" href="#">Navbar</a>
             </h1>
@@ -65,7 +66,26 @@
 
         </header>
         <div class="slide">
-            슬라이드
+            <!-- Swiper -->
+            <div class="swiper-container slide-intro">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/mainslide-1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/mainslide-2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/mainslide-3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/mainslide-4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
         <div id="main">
             <section class="sec-g sec-bbs">
@@ -116,25 +136,29 @@
                     <!-- w고정가운데정렬 -->
                     <h2 class="sec-tit">Contacts</h2>
                     <div class="sec-cont">
-                        <form class="gform" action="https://script.google.com/macros/s/AKfycbygYzMOcB5_VRvSsBSR8qYvaGp29tcZoOM-bBFJqoRwcn9byEWWA_dg8ik5FCSYID6Y/exec" method="post">
+                        <form class="gform"
+                            action="https://script.google.com/macros/s/AKfycbygYzMOcB5_VRvSsBSR8qYvaGp29tcZoOM-bBFJqoRwcn9byEWWA_dg8ik5FCSYID6Y/exec"
+                            method="post">
                             <div class="row">
                                 <div class="col-lg-1">
                                     <label for="usr">이름</label>
                                 </div>
-                                <div class="col-lg-5">                                    
+                                <div class="col-lg-5">
                                     <input type="text" class="form-control" id="usr" name="usr" value="홍길동">
                                 </div>
                                 <div class="col-lg-1">
                                     <label for="email">이메일</label>
                                 </div>
                                 <div class="col-lg-5">
-                                    <input type="email" class="form-control" id="email" name="email" value="id@mail.com">
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        value="id@mail.com">
                                 </div>
                                 <div class="col-lg-1">
                                     <label for="comment">문의내용</label>
                                 </div>
                                 <div class="col-lg-11">
-                                    <textarea class="form-control" rows="5" id="comment" name="comment" placeholder="문의주시면 답변 드리겠습니다.">문의주시면 답변 드리겠습니다.</textarea>
+                                    <textarea class="form-control" rows="5" id="comment" name="comment"
+                                        placeholder="문의주시면 답변 드리겠습니다.">문의주시면 답변 드리겠습니다.</textarea>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">메일 전송</button>
@@ -142,14 +166,14 @@
                             <div class="thankyou_message alert alert-success  alert-dismissible mt-3">
                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                                 <strong>Success!</strong> Indicates a successful or positive action.
-                              </div>
+                            </div>
                         </form>
                     </div>
                 </div>
             </section>
         </div>
         <footer id="footer">
-            <div class="container">풋터</div>            
+            <div class="container">풋터</div>
         </footer>
     </div>
 
@@ -157,7 +181,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> <!-- Popper JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="./dist/js/form-submission-handler.js"></script>
     <script src="./dist/js/comm.js"></script>
