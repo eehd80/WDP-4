@@ -149,6 +149,7 @@
 }
 .slide-bnr1 {
     overflow: visible;
+    margin-bottom: 100px;
     .swiper-button-next {right: -70px;}
     .swiper-button-prev {left: -70px;}
     .swiper-slide {
@@ -156,6 +157,53 @@
         display: flex; justify-content: center; align-items: center;
         height: 200px;
         background: $w; 
+        transition: all .3s;
+        &.swiper-slide-active {
+            z-index: 100;
+            background: purple; color: $w;
+            transform: scale(1.2);
+        }
+        &::after {
+            content: '';
+            position: absolute;top: 0;left: 0;right: 0;bottom: 0;
+            border: 1px solid rgba($b, .03);
+        }
+    }
+    
+}
+
+.swiper-wrap {
+    position: relative;
+    .swiper-button-next {right: -70px;}
+    .swiper-button-prev {left: -70px;}
+}
+.slide-bnr2 {    
+    .swiper-slide {
+        position: relative;
+        display: flex; justify-content: center; align-items: center;
+        flex-direction: column;
+        height: 200px; padding: 20px;
+        background: $w; 
+        strong {
+            position: relative; z-index: 150;
+            font-size: 1.3em; font-weight: normal;
+             transform: translateY(0);
+             transition: opacity .5s .2s;
+        }
+        p {
+            display: none;
+            position: relative; z-index: 150;
+            margin-top: 20px; font-size: 0.8em;
+            opacity: 0; transition: opacity .1s .4s;
+        }
+        // 일반적인 경우
+        &::before {
+            content: '';
+            position: absolute;top: 200px;left: 0;right: 0;bottom: 0;
+            background: purple;
+            transition: all .5s;
+        }
+        
         &::after {
             content: '';
             position: absolute;top: 0;left: 0;right: 0;bottom: 0;
@@ -163,6 +211,27 @@
         }
     }
 }
+// width 1024px 이상일 경우에만 보라색 배경이 들어가야 해
+@media screen and (min-width: 1024px) {
+    .slide-bnr2 {
+        .swiper-slide {
+            // 활성화 됐을 경우
+            &.swiper-slide-active {
+                color: $w;
+                &::before {
+                    top: 0;
+                }
+                strong {
+                    transform: translateY(-10px);
+                }
+                p {
+                    display: block;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+  }
 
 
 #footer {
