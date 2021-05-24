@@ -1,10 +1,38 @@
 $(document).ready(function(){
 
+  // 전역 변수
+  let $window = $(window)
+  
+  // gnb
+  $('#gnb').each(function(){
+
+    // 지역 변수
+    let $this = $(this),
+          $header = $('#header')
+
+    // 초기화
+    $this
+    .removeClass('on')
+    .on('mouseenter focusin' , function(){
+      // #gnb에게 on 클래스 추가
+      $this.addClass('on')
+      // #header에게 sticky 클래스 추가
+      $header.addClass('sticky')
+    })
+    .on('mouseleave focusout', function(){
+      $this.removeClass('on')
+      // 만약 (윈도우 스크롤 값 < 50) 다면
+      if( $window.scrollTop() < 50 ){
+        // #header에게 sticky 클래스 삭제
+        $header.removeClass('sticky')
+      }
+    })
+  })
+
   // header sticky
   $('#header').each(function(){
 
-    let $this = $(this),
-          $window = $(window)
+    let $this = $(this)          
 
     // #header의 높이값(padding, border 값이 포함 된)
     // https://www.w3schools.com/jquery/html_outerheight.asp
@@ -35,8 +63,6 @@ $(document).ready(function(){
     .trigger('scroll')
 
   })
-
-  // gnb
 
 
 

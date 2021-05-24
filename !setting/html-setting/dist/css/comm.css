@@ -251,11 +251,6 @@ input[type=password] {
   text-align: center;
 }
 
-#gnb.on .nav-depth2, #gnb.on .nav-bg {
-  height: 160px;
-  opacity: 1;
-}
-
 #gnb .nav-depth1 > li {
   position: relative;
 }
@@ -307,6 +302,11 @@ input[type=password] {
   background-color: #fff;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+}
+
+#gnb.on .nav-depth2, #gnb.on .nav-bg {
+  height: 160px;
+  opacity: 1;
 }
 
 .sec-g .container {
