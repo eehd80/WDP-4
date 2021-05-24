@@ -214,9 +214,10 @@ input[type=password] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0;
 }
 
-#header a {
+#header .nav-item > a {
   color: #fff;
 }
 
@@ -244,6 +245,68 @@ input[type=password] {
   .nav-util {
     display: block;
   }
+}
+
+#gnb {
+  text-align: center;
+}
+
+#gnb.on .nav-depth2, #gnb.on .nav-bg {
+  height: 160px;
+  opacity: 1;
+}
+
+#gnb .nav-depth1 > li {
+  position: relative;
+}
+
+#gnb .nav-depth1 > li:hover, #gnb .nav-depth1 > li:focus {
+  border-bottom: 3px solid tomato;
+}
+
+#gnb .nav-depth1 > li > a {
+  display: block;
+  height: 55px;
+  line-height: 55px;
+  padding: 0 25px;
+}
+
+#gnb .nav-depth2 {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  padding-top: 20px;
+  height: 0;
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#gnb .nav-depth2 a {
+  display: block;
+  padding: 4px 0;
+  color: #000;
+}
+
+#gnb .nav-depth2 a:hover, #gnb .nav-depth2 a:focus {
+  color: tomato !important;
+}
+
+#gnb .nav-bg {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  height: 0;
+  /* 160px */
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 .sec-g .container {
@@ -545,5 +608,21 @@ input[type=password] {
   padding: 80px 0;
   background: #555;
   color: #fff;
+}
+
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #555;
+  color: #fff;
+  font-size: 0;
+}
+
+#scrollUp:before {
+  font-family: 'Line Awesome Free';
+  font-weight: 900;
+  font-size: 1.5rem;
+  content: "\f106";
 }
 /*# sourceMappingURL=comm.css.map */

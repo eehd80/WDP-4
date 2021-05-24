@@ -20,12 +20,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="./dist/fonts/fonts.css"> <!-- webfonts 설정 -->
     <link rel="stylesheet" href="./dist/css/comm.css">
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#gnb" data-offset="50">
     <div id="u_skip">
         <a href="#gnb"><span>주메뉴 바로가기</span></a>
         <a href="#main"><span>컨텐츠 바로가기</span></a>
@@ -38,7 +39,7 @@
                 <h1>
                     <a class="navbar-brand" href="#">Navbar</a>
                 </h1>
-                <nav>
+                <nav id="gnb" class="">
 
                     <!-- Toggler/collapsibe Button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -46,20 +47,39 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
+                    <div class="nav-bg"></div>
                     <!-- Navbar links -->
-                    <div class="collapse navbar-collapse" id="gnb">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#bbs">공지사항</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#banner">배너</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contacts">Contacts</a>
-                            </li>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav nav-depth1">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#bbs">공지사항</a>
+                            <ul class="nav-depth2">
+                              <li><a href="#">menu1-1</a></li>
+                              <li><a href="#">menu1-2</a></li>
+                              <li><a href="#">menu1-3</a></li>
+                              <li><a href="#">menu1-4</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#banner">배너</a>
+                            <ul class="nav-depth2">
+                              <li><a href="#">menu2-1</a></li>
+                              <li><a href="#">menu2-2</a></li>
+                              <li><a href="#">menu2-3</a></li>
+                              <li><a href="#">menu2-4</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#contacts">Contacts</a>
+                            <ul class="nav-depth2">
+                              <li><a href="#">menu3-1</a></li>
+                              <li><a href="#">menu3-2</a></li>
+                              <li><a href="#">menu3-3</a></li>
+                              <li><a href="#">menu3-4</a></li>
+                            </ul>
+                          </li>
                         </ul>
-                    </div>
+                      </div>
                 </nav>
 
                 <nav class="nav-util">
@@ -273,7 +293,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> <!-- Popper JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    <script src="./dist/vender/jquery.scrollUp.min.js"></script>
     <script src="./dist/js/form-submission-handler.js"></script>
     <script src="./dist/js/comm.js"></script>
 </body>

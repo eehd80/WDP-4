@@ -36,6 +36,10 @@ $(document).ready(function(){
 
   })
 
+  // gnb
+
+
+
   // gnb 클릭시 해당 해쉬태그로 애니메이션 되면 이동
   $('#gnb a').click(function(event){
 
@@ -50,12 +54,20 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop : $(hash).offset().top - 20 /* gnb의 높이값을 빼주삼 */
       }, 800)
-
-
     }
-
-
   })
+
+  // scrollUp.js
+  $.scrollUp({
+    scrollName: 'scrollUp', // Element ID
+    topDistance: '300', // Distance from top before showing element (px)
+    topSpeed: 300, // Speed back to top (ms)
+    animation: 'fade', // Fade, slide, none
+    animationInSpeed: 200, // Animation in speed (ms)
+    animationOutSpeed: 200, // Animation out speed (ms)
+    scrollText: '페이지 상단으로 이동', // Text for element
+    activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+  });
 
 
 

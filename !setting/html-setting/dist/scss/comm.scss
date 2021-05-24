@@ -5,7 +5,8 @@
 #header {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     justify-content: space-between;
-    a {
+    padding: 0;
+    .nav-item > a {
         color: $w;
     }
     &.sticky {
@@ -29,6 +30,47 @@
       display: block;
     }
   }
+
+  #gnb {
+    text-align: center;
+    // 마우스 오버시
+    &.on {
+        .nav-depth2, .nav-bg {
+            height: 160px; opacity: 1;
+        }
+    }
+    .nav-depth1 > li {
+        position: relative;
+        &:hover, &:focus { 
+            border-bottom: 3px solid tomato;
+        }
+        > a {
+            display: block;
+            height: 55px; line-height: 55px;
+            padding: 0 25px;
+        }
+    }
+    .nav-depth2 {
+        position: absolute;top: 55px;left: 0;right: 0;
+        overflow: hidden; padding-top: 20px;
+        height: 0; opacity: 0; transition: all .5s;
+        a {
+            display: block;
+            padding: 4px 0;
+            color: $b;
+            &:hover, &:focus { 
+                color: tomato !important;
+                // background: red;
+            }
+        }
+    }
+    .nav-bg {
+        position: absolute;top: 55px;left: 0;right: 0;
+        height: 0; /* 160px */ opacity: 0; transition: all .5s;
+        background-color: $w;
+        border-top: 1px solid #eee; border-bottom: 1px solid #eee;
+    }
+}
 
 .sec-g {
     .container {
@@ -248,3 +290,16 @@
     padding: 80px 0;
     background: #555;  color: $w;
 } 
+
+#scrollUp {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #555;
+    color: #fff; font-size: 0;
+    &:before {
+        font-family: 'Line Awesome Free';
+        font-weight: 900; font-size: 1.5rem;
+        content: "\f106";
+    }
+  }
