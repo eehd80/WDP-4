@@ -216,6 +216,21 @@ input[type=password] {
           justify-content: space-between;
 }
 
+#header a {
+  color: #fff;
+}
+
+#header.sticky {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.02);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.02);
+}
+
+#header.sticky a {
+  color: #000;
+}
+
 .navbar-brand {
   display: block;
 }

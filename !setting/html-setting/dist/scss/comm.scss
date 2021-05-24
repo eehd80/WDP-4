@@ -5,6 +5,16 @@
 #header {
     position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
     justify-content: space-between;
+    a {
+        color: $w;
+    }
+    &.sticky {
+        background: $w; border-bottom: 1px solid #eee;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.02);
+        a {
+            color: $b;
+        }
+    }
 }
 .navbar-brand {
     display: block;
