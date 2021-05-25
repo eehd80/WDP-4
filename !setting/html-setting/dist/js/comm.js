@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
   // 전역 변수
-  let $window = $(window)
+  let $window = $(window),
+        winScroll = $(window).scrollTop()
   
   // gnb
   $('#gnb').each(function(){
@@ -22,7 +23,7 @@ $(document).ready(function(){
     .on('mouseleave focusout', function(){
       $this.removeClass('on')
       // 만약 (윈도우 스크롤 값 < 50) 다면
-      if( $window.scrollTop() < 50 ){
+      if( winScroll < 50 ){
         // #header에게 sticky 클래스 삭제
         $header.removeClass('sticky')
       }
@@ -82,6 +83,25 @@ $(document).ready(function(){
       }, 800)
     }
   })
+
+  // 스크롤시 오브젝스 애니메이션
+  $(window).scroll(function(){
+    $('.ani-scroll').each(function(){
+
+      let $this = $(this),
+            pos = $this.offset().top,
+            winScroll = $(window).scrollTop()
+
+      // 만약 (winScroll > pos) 경우
+      if( winScroll + 600 > pos ){
+        // .ani-scroll 에게 .ani-top
+        $this.addClass('ani-top')
+      }
+
+
+    })
+  })
+
 
   // scrollUp.js
   $.scrollUp({
@@ -180,14 +200,10 @@ $(document).ready(function(){
     },
   });
 
+  // wow
+  new WOW().init();    
 
-
-
-
-
-
-
-
-    
+  // include
+  includeHTML();
 
 });

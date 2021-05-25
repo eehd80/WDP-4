@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./dist/vender/wow/animate.css">
     <link rel="stylesheet" href="./dist/fonts/fonts.css"> <!-- webfonts 설정 -->
     <link rel="stylesheet" href="./dist/css/comm.css">
 
@@ -40,13 +41,13 @@
                     <a class="navbar-brand" href="#">Navbar</a>
                 </h1>
                 <nav id="gnb" class="">
-
+            
                     <!-- Toggler/collapsibe Button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#collapsibleNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
+            
                     <div class="nav-bg"></div>
                     <!-- Navbar links -->
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -81,7 +82,7 @@
                         </ul>
                       </div>
                 </nav>
-
+            
                 <nav class="nav-util">
                     <a href="#">유틸메뉴</a> 
                 </nav>
@@ -138,8 +139,8 @@
                 <!-- w100% -->
                 <div class="container">
                     <!-- w고정가운데정렬 -->
-                    <h2 class="sec-tit">공지사항</h2>
-                    <div class="sec-cont">
+                    <h2 class="sec-tit ani-scroll">공지사항</h2>
+                    <div class="sec-cont ani-scroll">
                         <!-- tab -->
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs">
@@ -169,11 +170,11 @@
                 <!-- w100% -->
                 <div class="container">
                     <!-- w고정가운데정렬 -->
-                    <h2 class="sec-tit">배너</h2>
+                    <h2 class="sec-tit wow bounceInUp">배너</h2>
                     <div class="sec-cont">
 
                         <!-- slide-bnr1 -->
-                        <div class="swiper-container slide-bnr1">
+                        <div class="swiper-container slide-bnr1 wow bounceInUp"  data-wow-duration="2s"  data-wow-delay="5s">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">Slide 1</div>
                                 <div class="swiper-slide">Slide 2</div>
@@ -190,7 +191,7 @@
                         </div>
 
                         <!-- slide-bnr2 -->
-                        <div class="swiper-wrap">
+                        <div class="swiper-wrap wow bounceInUp" data-wow-offset="10"  data-wow-iteration="10">
                             <div class="swiper-container slide-bnr2">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -283,9 +284,7 @@
                 </div>
             </section>
         </div>
-        <footer id="footer">
-            <div class="container">풋터</div>
-        </footer>
+        <footer id="footer" include-html="./layout/footer.html"></footer>
     </div>
 
 
@@ -294,6 +293,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./dist/vender/jquery.scrollUp.min.js"></script>
+    <script src="./dist/vender/wow/wow.min.js"></script>
+    <script src="./dist/vender/include.js"></script>
     <script src="./dist/js/form-submission-handler.js"></script>
     <script src="./dist/js/comm.js"></script>
 </body>
